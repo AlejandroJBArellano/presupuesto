@@ -1,0 +1,48 @@
+<%- include('partials/head') %>
+<body class="montserrat tc">
+    <div class="contenedor">
+        <header>
+            <nav class=".navbar">
+                <a href="/home">
+                    <img src="logo.png" alt="logo" title="presupuestoapp">
+                    <p>Presupuesto App</p>
+                </a>
+                <a href="/logout">Cerrar Sesión</a>
+            </nav>
+        </header>
+        <main>
+            <figure>
+                <img src="<%= profilePic %>" alt="Foto de <%= username %>">
+                <figcaption><%= username %></figcaption>
+            </figure>
+            <h2 class="tc">Presupuesto: $<%= budget %></h2>
+            <section class="grid col-3">
+                <article class="span-1 med-span-3">
+                    <form action="/moreMoney" method="POST" id="form">
+                        <input type="text" name="concept" placeholder="Concepto">
+                        <input type="text" name="cuantity" placeholder="Cantidad">
+                        <button class="boton m5">Añadir dinero</button>
+                        <button class="boton m5">Restar dinero</button>
+                    </form>
+                </article>
+                <article class="span-2 med-span-3">
+                    <h2>Historial de transacciones</h2>
+                    <% for(var i = transactions.length-1; i >= 0; i--) { %>
+                        <div class="card">
+                            <p><%= transactions[i].concept %></p>
+                            <% if (transactions[i].action == "+") { %>
+                                <p class="verde"><%= transactions[i].action %><%= transactions[i].cuantity %></p>
+                            <% } %>
+                            <% if (transactions[i].action == "-") { %>
+                                <p class="rojo"><%= transactions[i].action %><%= transactions[i].cuantity %></p>
+                            <% } %>
+                            <p><%= transactions[i].createdAt.getDate() %>/<%= transactions[i].createdAt.getMonth() %>/<%= transactions[i].createdAt.getFullYear() %></p>
+                        </div>
+                    <% } %>
+                </article>
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+<%- include('partials/footer') %>

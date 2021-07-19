@@ -1,0 +1,80 @@
+body{
+    .contenedor{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        header{
+            display: block;
+            nav{
+                background-color: darkgreen;
+                padding: 10px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                & > * {
+                    padding: 10px;
+                }
+                a, a:visited{
+                    letter-spacing: 1.5px;
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    text-decoration: none;
+                    font-size: 25px;
+                    img{
+                        display: inline-block;
+                        height: 50px;
+                        width: 50px;
+                    }
+                    p{
+                        margin: auto 0;
+                        display: inline-block;
+                        height: 100%;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        main{
+            figure{
+                display: grid;
+                place-items: center;
+                img{
+                    width: 100px;
+                }
+                figcaption{
+                    font-size: 27px;
+                    font-weight: 500;
+                }
+            }
+            section{
+                p, a, a:visited{
+                    text-decoration: none;
+                    font-size: 25px;
+                }
+                article{
+                    form{
+                        display: block;
+                        button{
+                            text-align: center;
+                            margin: 1rem;
+                        }
+                        input{
+                            margin: 20px 10px;
+                        }
+                    }
+                    div{
+                        .verde{color: green;}
+                        .rojo{color: red;}
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    body{
+        width: 100%;
+    }
+}

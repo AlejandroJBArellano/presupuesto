@@ -1,0 +1,102 @@
+body .contenedor {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+body .contenedor header {
+  display: block;
+}
+
+body .contenedor header nav {
+  background-color: darkgreen;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .contenedor header nav > * {
+  padding: 10px;
+}
+
+body .contenedor header nav a, body .contenedor header nav a:visited {
+  letter-spacing: 1.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+body .contenedor header nav a img, body .contenedor header nav a:visited img {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+body .contenedor header nav a p, body .contenedor header nav a:visited p {
+  margin: auto 0;
+  display: inline-block;
+  height: 100%;
+  padding: 10px;
+}
+
+body .contenedor main figure {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body .contenedor main figure img {
+  width: 100px;
+}
+
+body .contenedor main figure figcaption {
+  font-size: 27px;
+  font-weight: 500;
+}
+
+body .contenedor main section p, body .contenedor main section a, body .contenedor main section a:visited {
+  text-decoration: none;
+  font-size: 25px;
+}
+
+body .contenedor main section article form {
+  display: block;
+}
+
+body .contenedor main section article form button {
+  text-align: center;
+  margin: 1rem;
+}
+
+body .contenedor main section article form input {
+  margin: 20px 10px;
+}
+
+body .contenedor main section article div .verde {
+  color: green;
+}
+
+body .contenedor main section article div .rojo {
+  color: red;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
