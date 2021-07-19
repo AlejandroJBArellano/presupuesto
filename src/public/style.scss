@@ -76,5 +76,8 @@ body{
 @media screen and (max-width: 500px) {
     body{
         width: 100%;
+        .contenedor main section article form button{
+            margin:10px;
+        }
     }
 }

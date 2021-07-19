@@ -1,11 +1,14 @@
 // npm modules
 require("dotenv").config()
-const express = require("express"), app = express(), helmet = require("helmet"), morgan = require("morgan"), path = require("path"), router = require("./routes/index"), passport = require("passport"), session = require("express-session"), cookieSession = require("cookie-session");
+const express = require("express"), helmet = require("helmet"), morgan = require("morgan"), path = require("path"), router = require("./routes/index"), passport = require("passport"), session = require("express-session"), cookieSession = require("cookie-session"),
+
+// 1) Settings 
+
+app = express();
 require("./database")
 require("./passport/google-oauth2")
 
-// 1) Settings 
-app.set("port", process.env.PORT || 3000)
+app.set("port", process.env.PORT || 5000)
 app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "ejs")
 

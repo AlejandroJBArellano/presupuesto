@@ -98,5 +98,8 @@ body .contenedor main section article div .rojo {
   body {
     width: 100%;
   }
+  body .contenedor main section article form button {
+    margin: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

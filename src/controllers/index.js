@@ -7,10 +7,6 @@ validateUser = async (req, res) => {
             return res.redirect("/")
         }
     }
-}, 
-requestBody = {
-    concept: String,
-    cuantity: String
 },
 all = async (req, res, next) => {
     validateUser(req, res)
@@ -56,7 +52,6 @@ moreMoney = async (req, res) => {
 },
 lessMoney = async (req, res) => {
     try{
-        if(req.body != requestBody) {res.redirect("/404")}
         const user = await User.findById(req.user), cuantity = parseInt(req.body.cuantity)
         if(!user) return res.redirect("/")
         user.transactions.push({
