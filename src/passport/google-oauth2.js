@@ -18,6 +18,8 @@ passport.use(new GoogleStrategy({
 }, async (req, accessToken, refreshToken, profile, done) => {
     const validateUser = await User.findOne({ email: profile.emails[0].value })
     if(validateUser) {
+        validateUser.profilePic = profile.photos[0].value
+        await validateUser.save()
         return done(null, validateUser._id)
     } {
         const newUser = new User()
