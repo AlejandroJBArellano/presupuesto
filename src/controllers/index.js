@@ -35,9 +35,7 @@ home = async (req,res) => {
     } catch (e) {res.redirect("/404")}
 },
 moreMoney = async (req, res) => {
-    console.log(req.body)
     try{
-        if(req.body != requestBody) {res.redirect("/404")}
         const user = await User.findById(req.user), cuantity = parseInt(req.body.cuantity)
         if(!user) return res.redirect("/")
         user.transactions.push({
