@@ -12,7 +12,7 @@
         </header>
         <main>
             <figure>
-                <img src="<%= profilePic %>" alt="Foto de <%= username %>">
+                <img src="<%= profilePic %>" alt="" referrerpolicy="no-referrer">
                 <figcaption><%= username %></figcaption>
             </figure>
             <h2 class="tc">Presupuesto: $<%= budget %></h2>
@@ -36,7 +36,7 @@
                             <% if (transactions[i].action == "-") { %>
                                 <p class="rojo"><%= transactions[i].action %><%= transactions[i].cuantity %></p>
                             <% } %>
-                            <p><%= transactions[i].createdAt.getDate() %>/<%= transactions[i].createdAt.getMonth() %>/<%= transactions[i].createdAt.getFullYear() %></p>
+                            <p><%= transactions[i].createdAt.getDate() %>/<%= transactions[i].createdAt.getMonth()+1 %>/<%= transactions[i].createdAt.getFullYear() %></p>
                         </div>
                     <% } %>
                 </article>

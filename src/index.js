@@ -1,6 +1,6 @@
 // npm modules
 require("dotenv").config()
-const express = require("express"), helmet = require("helmet"), morgan = require("morgan"), path = require("path"), router = require("./routes/index"), passport = require("passport"), session = require("express-session"), cookieSession = require("cookie-session"),
+const express = require("express"), helmet = require("helmet"), path = require("path"), router = require("./routes/index"), passport = require("passport"), session = require("express-session"),
 
 // 1) Settings 
 
@@ -16,7 +16,6 @@ app.set("view engine", "ejs")
 app.use(helmet())
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use(morgan("dev"))
 app.use(session({ //objeto como configuración de esta sesión
     secret: "interface-calculate", //especie de texto secreto para poerd estar seguro *nombre aleatorio
     resave: false,
